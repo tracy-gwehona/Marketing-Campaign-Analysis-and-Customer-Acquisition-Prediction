@@ -4,11 +4,12 @@
 1. [Project Overview](#project-overview)
 2. [Business Understanding](#business-understanding)
 3. [Data Understanding](#data-understanding)
-4. [Data Cleaning and Preprocessing](#data-cleaning-and-preprocessing)
+4. [Data Cleaning](#data-cleaning)
 5. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
-6. [Modeling and Prediction](#modeling-and-prediction)
-7. [Results and Evaluation](#results-and-evaluation)
-8. [Conclusion](#conclusion)
+6. [Data Preprocessing](data-preprocessing)
+7. [Modeling and Prediction](#modeling-and-prediction)
+8. [Results and Evaluation](#results-and-evaluation)
+9. [Conclusion](#conclusion)
 
 ## Project Overview
 Podha, a growing company, has been running multiple marketing campaigns to acquire new customers. However, due to a crunch in funds, the company has decided to limit its efforts to a single marketing campaign that optimizes budget utilization while maximizing customer acquisition and profitability. Additionally, there is a need to predict customer acquisition based on the available budget.
