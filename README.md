@@ -57,9 +57,13 @@ The dataset provides comprehensive information about customer transactions, incl
      - `Customer Acquisition Prediction`: Fields like Region, Country, AcquisitionSource, and budget-related fields (ProductCost, ProductPrice) can be used to build predictive models.
 
 ## Data Cleaning
-#### 1. Check for Duplicates:
+#### 1. Convert `ProductPrice` to Numeric:
+The ProductPrice column was converted from object to numeric format, with any non-numeric values coerced to NaN.
+
+#### 2. Check for Duplicates:
 The dataset was checked for duplicates using df.duplicated().sum(). No duplicates were found.
-#### 2. Check for Missing Values:
+
+#### 3. Check for Missing Values:
 The dataset was checked for missing values. The following columns had missing values:
 - `Customer_Name`: 3 missing values.
 - `AcquisitionSource`: 1 missing value.
@@ -72,15 +76,14 @@ The dataset was checked for missing values. The following columns had missing va
 The missing values were handled as follows:
 - Customer_Name and AcquisitionSource: Missing values were replaced with "Unknown".
 - Fraud, CardType, and Gender: These columns were dropped due to a high number of missing values.
-#### 3. Filter Relevant Columns:
+
+#### 4. Filter Relevant Columns:
 The dataset was filtered to include only the following relevant columns:
 - `AcquisitionSource`: The source through which the customer was acquired.
 - `OrderQuantity`: The number of products ordered by the customer.
 - `ProductCost`: The cost of the product.
 - `ProductPrice`: The selling price of the product.
 - `CustID`: A unique identifier for each customer.
-#### 4. Convert ProductPrice to Numeric:
-The ProductPrice column was converted from object to numeric format.
 
 ## Feature Engineering
 1. **Calculating Total Profit**:
