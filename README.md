@@ -5,11 +5,12 @@
 2. [Business Understanding](#business-understanding)
 3. [Data Understanding](#data-understanding)
 4. [Data Cleaning](#data-cleaning)
-5. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
-6. [Data Preprocessing](data-preprocessing)
-7. [Modeling and Prediction](#modeling-and-prediction)
-8. [Results and Evaluation](#results-and-evaluation)
-9. [Conclusion](#conclusion)
+5. [Feature Engineering](#feature-engineering)
+6. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+7. [Data Preprocessing](data-preprocessing)
+8. [Modeling and Prediction](#modeling-and-prediction)
+9. [Results and Evaluation](#results-and-evaluation)
+10. [Conclusion](#conclusion)
 
 ## Project Overview
 Podha, a growing company, has been running multiple marketing campaigns to acquire new customers. However, due to a crunch in funds, the company has decided to limit its efforts to a single marketing campaign that optimizes budget utilization while maximizing customer acquisition and profitability. Additionally, there is a need to predict customer acquisition based on the available budget.
@@ -80,3 +81,18 @@ The dataset was filtered to include only the following relevant columns:
 - `CustID`: A unique identifier for each customer.
 #### 4. Convert ProductPrice to Numeric:
 The ProductPrice column was converted from object to numeric format.
+
+## Feature Engineering
+1. **Calculating Total Profit**:
+A new column, TotalProfit, is added to the DataFrame, calculated by multiplying the difference between ProductPrice and ProductCost by the OrderQuantity. This represents the total profit from each order.
+2. **Calculating Budget (Total Spend)**:
+The Budget column is created by multiplying the ProductCost by OrderQuantity, representing the total spend on each order.
+3. **Campaign Summary by Acquisition Source**:
+The data is grouped by AcquisitionSource, and summary statistics are calculated:
+
+   - TotalProfit: The sum of profits for each acquisition source.
+   - Budget: The total spend for each acquisition source.
+   - UsersAcquired: The number of unique users acquired through each acquisition source. The grouped data is stored in campaign_summary.
+
+4. **Calculating Profitability per User**:
+The Profitability metric is calculated by dividing TotalProfit by UsersAcquired for each acquisition source. This metric shows how profitable each user acquired through a specific source is.
