@@ -54,3 +54,29 @@ The dataset provides comprehensive information about customer transactions, incl
 - **Relevance to Objectives**
      - `Marketing Campaign Analysis`: Columns such as AcquisitionSource, ProductCost, ProductPrice, and OrderQuantity are directly relevant to calculating profitability and identifying effective campaigns.
      - `Customer Acquisition Prediction`: Fields like Region, Country, AcquisitionSource, and budget-related fields (ProductCost, ProductPrice) can be used to build predictive models.
+
+## Data Cleaning
+#### 1. Check for Duplicates:
+The dataset was checked for duplicates using df.duplicated().sum(). No duplicates were found.
+#### 2. Check for Missing Values:
+The dataset was checked for missing values. The following columns had missing values:
+- `Customer_Name`: 3 missing values.
+- `AcquisitionSource`: 1 missing value.
+- `Fraud`: 703 missing values.
+- `CardType`: 5,223 missing values.
+- `Gender`: 6,328 missing values.
+
+**Dealing with Missing Values**:
+
+The missing values were handled as follows:
+- Customer_Name and AcquisitionSource: Missing values were replaced with "Unknown".
+- Fraud, CardType, and Gender: These columns were dropped due to a high number of missing values.
+#### 3. Filter Relevant Columns:
+The dataset was filtered to include only the following relevant columns:
+- `AcquisitionSource`: The source through which the customer was acquired.
+- `OrderQuantity`: The number of products ordered by the customer.
+- `ProductCost`: The cost of the product.
+- `ProductPrice`: The selling price of the product.
+- `CustID`: A unique identifier for each customer.
+#### 4. Convert ProductPrice to Numeric:
+The ProductPrice column was converted from object to numeric format.
