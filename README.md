@@ -90,15 +90,6 @@ The dataset was filtered to include only the following relevant columns:
 A new column, TotalProfit, is added to the DataFrame, calculated by multiplying the difference between ProductPrice and ProductCost by the OrderQuantity. This represents the total profit from each order.
 2. **Calculating Budget (Total Spend)**:
 The Budget column is created by multiplying the ProductCost by OrderQuantity, representing the total spend on each order.
-3. **Campaign Summary by Acquisition Source**:
-The data is grouped by AcquisitionSource, and summary statistics are calculated:
-
-   - TotalProfit: The sum of profits for each acquisition source.
-   - Budget: The total spend for each acquisition source.
-   - UsersAcquired: The number of unique users acquired through each acquisition source. The grouped data is stored in campaign_summary.
-
-4. **Calculating Profitability per User**:
-The Profitability metric is calculated by dividing TotalProfit by UsersAcquired for each acquisition source. This metric shows how profitable each user acquired through a specific source is.
 
 ## Exploratory Data Analysis (EDA)
 #### 1. Profitability per User by Acquisition Source
@@ -111,8 +102,8 @@ The Profitability metric is calculated by dividing TotalProfit by UsersAcquired 
 ![image](https://github.com/user-attachments/assets/2a013a1a-a07a-46b3-ac4d-1ff57e6e6a01)
 
 ### Insights:
-1. Campaign A is the most effective in both customer acquisition and revenue generation.
+1. `Google-ads` is the most effective in both customer acquisition and revenue generation.
 
-2. Although Campaign B and Campaign C have similar customer acquisition numbers, Campaign B generates slightly more revenue than Campaign C.
+2. Although `Meta-ads` and `Yt-Campaign` have similar customer acquisition numbers, `Meta-ads` generates slightly more revenue than `Yt-Campaign`.
 
-3. This suggests that Campaign A is likely the best investment for the company in terms of maximizing customer acquisition and revenue. Further analysis can confirm its profitability per customer.
+3. This suggests that `Google-ads` is likely the best investment for the company in terms of maximizing customer acquisition and revenue. Further analysis can confirm its profitability per customer.
