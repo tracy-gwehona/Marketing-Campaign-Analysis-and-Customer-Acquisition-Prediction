@@ -99,3 +99,20 @@ The data is grouped by AcquisitionSource, and summary statistics are calculated:
 
 4. **Calculating Profitability per User**:
 The Profitability metric is calculated by dividing TotalProfit by UsersAcquired for each acquisition source. This metric shows how profitable each user acquired through a specific source is.
+
+## Exploratory Data Analysis (EDA)
+#### 1. Profitability per User by Acquisition Source
+![image](https://github.com/user-attachments/assets/85930056-505d-4cb8-b46a-35b895130ddc)
+
+#### 2. Total Profit by Acquisition Source
+![image](https://github.com/user-attachments/assets/4e8c082e-2f25-4a7e-abb7-b2a57f674fad)
+
+#### 3. Users Acquired by Acquisition Source
+![image](https://github.com/user-attachments/assets/2a013a1a-a07a-46b3-ac4d-1ff57e6e6a01)
+
+### Insights:
+1. Campaign A is the most effective in both customer acquisition and revenue generation.
+
+2. Although Campaign B and Campaign C have similar customer acquisition numbers, Campaign B generates slightly more revenue than Campaign C.
+
+3. This suggests that Campaign A is likely the best investment for the company in terms of maximizing customer acquisition and revenue. Further analysis can confirm its profitability per customer.
